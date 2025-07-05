@@ -4,7 +4,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background: url('https://images.unsplash.com/photo-1541789094913-f3809a8f3ba5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background: url('resources/wallpaperflare.com_wallpaper.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
