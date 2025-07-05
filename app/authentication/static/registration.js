@@ -17,7 +17,9 @@ function registerClicked(username, password) {
         {
             console.log("GUU8HC: " + data['result']);
             if (data['result'] == true) {
-                document.cookie = `username=${username}`;
+                // Registration successful, redirect to private page
+                // Server-side session is already set by login_user() call
+                console.log("Registration successful, redirecting...");
                 window.location.href = '/home/private';
             } else {
                 alert("Invalid username or password");
