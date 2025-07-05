@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/registration.css">
+    <title>Registration</title>
+</head>
+<body>
+    {% if gitv %}
+    <div id="gitv-label">-b {{ gitv }}</div>
+    {% endif %}
+    <div class="wrapper">
+        <form action="#">
+            <h2>REGISTRATION</h2>
+            <div class="input-field">
+                <input type="text" required>
+                <label>Enter your email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required>
+                <label>Enter your password</label>
+            </div>
+            <!-- <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    <p>Remember me</p>
+                </label>
+                <a href="#">Forgot password?</a>
+            </div> -->
+            <button id="button-register" type="submit">Register</button>
+            <!-- <div class="login">
+                <p>Have an account? <a href="#">Login</a></p>
+            </div> -->
+        </form>
+    </div>
+</body>
+<script src="static/registration.js"></script>
+</html>

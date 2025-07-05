@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url('https://images.unsplash.com/photo-1572816703439-d8b34c4dc93f?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+    position: relative;
+    z-index: 1;
+    color: white !important; /* Adjust color as needed */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 2s forwards;
+    font-size: 100px !important;
+    font-weight: 700 !important;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+    /* font-family: 'Inter Tight'; */
+    position: absolute !important;
+    top: 24px !important;
+    right: 80px !important;
+    /* padding: 10px; */
+    padding: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    border-radius: 50px !important;
+}
+
+.nav-link {
+    padding: 0 !important;
+}
+
+li {
+    font-size: 19px !important;
+    display: block !important;
+    padding: 20px 15px 20px 15px !important;
+    position: relative;
+}
+
+#button-signup {
+    display: flex;
+    align-items: center;
+    font-size: 19px !important;
+    border-radius: 50px !important;
+    margin: 0 0 0 10px;
+    padding: 9px 17px 9px 19px;
+}
+
+#gitv-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: burlywood;
+    color: black;
+    padding: 5px 20px;
+    font-size: 10px;
+    /* font-weight: bold; */
+    border-radius: 25px;
+    z-index: 1000;
+}
