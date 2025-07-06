@@ -63,7 +63,7 @@ li {
     padding: 9px 17px 9px 19px;
 }
 
-#gitv-label {
+.label-gitv {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -71,7 +71,6 @@ li {
     color: black;
     padding: 5px 20px;
     font-size: 10px;
-    /* font-weight: bold; */
     border-radius: 25px;
     z-index: 1000;
 }

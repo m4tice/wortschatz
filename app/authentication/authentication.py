@@ -18,17 +18,17 @@ def obsolete_signin():
     """
     return render_template('authentication/obsolete/signin.html')
 
-@authentication_bp.route('/signin')
-def signin():
+@authentication_bp.route('/login')
+def login():
     """
-    route: /auth/signin
+    route: /auth/login
     """
-    return render_template('authentication/signin.html', gitv=get_git_branch())
+    return render_template('authentication/login.html', gitv=get_git_branch())
 
-@authentication_bp.route('/signin/<username>/<password>', methods=['GET'])
+@authentication_bp.route('/login/<username>/<password>', methods=['GET'])
 def authenticate(username, password):
     """
-    route: /auth/signin/<username>/<password>
+    route: /auth/login/<username>/<password>
     """
     login_user(username)
     result = authenticator.authenticate(username, password)
@@ -59,10 +59,10 @@ def restore_password():
     """
     return render_template('authentication/restore-password.html', gitv=get_git_branch())
 
-@authentication_bp.route('/signout')
-def signout():
+@authentication_bp.route('/logout')
+def logout():
     """
-    route: /auth/signout
+    route: /auth/logout
     """
     logout_user()
-    return render_template('authentication/signin.html')
+    return render_template('authentication/login.html')

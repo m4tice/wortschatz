@@ -16,7 +16,7 @@ def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if 'user_id' not in session:  # Check if the user is logged in
-            return redirect(url_for('authentication.signin'))  # Redirect to the login page
+            return redirect(url_for('authentication.login'))  # Redirect to the login page
         return f(*args, **kwargs)
     return decorated_function
 

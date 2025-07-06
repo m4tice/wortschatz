@@ -1,4 +1,4 @@
-document.getElementById('button-register').addEventListener('click', function(event) {
+document.getElementById('btn-register').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent form submission
     const username = document.querySelector('input[type="text"]').value;
     const password = document.querySelector('input[type="password"]').value;
@@ -30,8 +30,3 @@ function registerClicked(username, password) {
         alert("An error occurred during registration.");
     });
 }
-
-document.querySelector('.login a').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default link behavior
-    window.location.href = '/auth/signin'; // Redirect to home page
-});

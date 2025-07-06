@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function authenticate(username, password) {
-    console.log("[DEBUG] signin.js: authenticate() called");
-    fetch(`/auth/signin/${username}/${password}`, {
+    console.log("[DEBUG] login.js: authenticate() called");
+    fetch(`/auth/login/${username}/${password}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'

@@ -6,5 +6,5 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function redirect_logout(){
-    window.location.href = '/auth/signout';
+    window.location.href = '/auth/logout';
 }
