@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --main: burlywood;
+  --side: #d2b48c;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-apple: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    font-family: var(--font-apple) !important;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -9,7 +24,6 @@ body {
 }
 
 h1 {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
     position: relative;
     z-index: 1;
     color: #868686 !important; /* Adjust color as needed */
@@ -29,7 +43,6 @@ h1 {
 }
 
 .navbar {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
     position: absolute !important;
     top: 24px !important;
     right: 80px !important;
@@ -66,7 +79,8 @@ li {
     position: absolute;
     top: 15px;
     left: 15px;
-    background: burlywood;
+    /* background: linear-gradient(135deg, var(--main), #c8a882); */
+    background: var(--main);
     color: #2c2c2c;
     padding: 8px 16px;
     font-size: 11px;
