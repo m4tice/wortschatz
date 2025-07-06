@@ -10,27 +10,27 @@
 
 <body>
     {% if gitv %}
-    <div id="gitv-label">-b {{ gitv }}</div>
+    <div class="label-gitv">-b {{ gitv }}</div>
     {% endif %}
-    <div class="wrapper">
+    <div class="container cont-wrapper">
         <form action="#">
-            <h2>SIGN IN</h2>
+            <h2>Wortschatz</h2>
             <div class="input-field">
-                <input type="text" required>
+                <input type="text" required placeholder="">
                 <label>Enter your email</label>
             </div>
             <div class="input-field">
-                <input type="password" required>
+                <input type="password" required placeholder="">
                 <label>Enter your password</label>
             </div>
-            <div class="forget">
+            <div class="container cont-forget">
                 <label for="remember">
                     <input type="checkbox" id="remember">
                     <p>Remember me</p>
                 </label>
                 <a href="#">Forgot password?</a>
             </div>
-            <button id="button-signin" type="submit">Log In</button>
+            <button class="btn btn-login" type="submit">Log in</button>
             <div class="register">
                 <p>Don't have an account? <a class="register-link" href="#">Register</a></p>
             </div>
