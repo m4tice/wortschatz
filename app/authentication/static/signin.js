@@ -54,7 +54,6 @@ function authenticate(username, password) {
     .then(response => response.json())
     .then(data => 
         {
-            console.log("GUU8HC: " + data['result']);
             if (data['result'] == true) {
                 // Authentication successful, redirect to private page
                 // Server-side session is already set by login_user() call
