@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('button-signout').addEventListener('click', function(event) {
+    document.getElementById('btn-logout').addEventListener('click', function(event) {
     event.preventDefault();
-    redirect_signout();
+    redirect_logout();
     });
 });
 
-function redirect_signout(){
+function redirect_logout(){
     window.location.href = '/auth/signout';
 }
