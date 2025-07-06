@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User registration form">
+    <title>Registration - Wortschatz</title>
     <link rel="stylesheet" href="static/registration.css">
-    <title>Registration</title>
 </head>
+
 <body>
+    <!-- Git version indicator (if available) -->
     {% if gitv %}
-    <div id="gitv-label">-b {{ gitv }}</div>
+    <div class="label-gitv">-b {{ gitv }}</div>
     {% endif %}
-    <div class="wrapper">
-        <form action="#">
-            <h2>REGISTRATION</h2>
+
+    <!-- Main registration container -->
+    <main class="container cont-wrapper">
+        <form action="#" method="post" novalidate>
+            <h2>Registration</h2>
+
+            <!-- Email input field -->
             <div class="input-field">
-                <input type="text" required>
-                <label>Enter your email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="">
+                <label for="email">Enter your email</label>
             </div>
+
+            <!-- Password input field -->
             <div class="input-field">
-                <input type="password" required>
-                <label>Enter your password</label>
+                <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required placeholder="">
+                <label for="password">Enter your password</label>
             </div>
-            <!-- <div class="forget">
-                <label for="remember">
-                    <input type="checkbox" id="remember">
-                    <p>Remember me</p>
-                </label>
-                <a href="#">Forgot password?</a>
-            </div> -->
-            <button id="button-register" type="submit">Register</button>
-            <!-- <div class="login">
-                <p>Have an account? <a href="#">Login</a></p>
-            </div> -->
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-register" aria-label="Register new account">
+                Register
+            </button>
         </form>
-    </div>
+    </main>
+
+    <!-- JavaScript for form functionality -->
+    <script src="static/registration.js"></script>
 </body>
-<script src="static/registration.js"></script>
+
 </html>
