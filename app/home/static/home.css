@@ -54,7 +54,7 @@ li {
     position: relative;
 }
 
-#button-signup {
+#btn-signup {
     display: flex;
     align-items: center;
     font-size: 19px !important;
