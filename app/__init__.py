@@ -26,4 +26,7 @@ def create_app():
     from app.authentication import authentication_bp
     app.register_blueprint(authentication_bp, url_prefix='/auth')
 
+    from app.wortschatz import wortschatz_bp
+    app.register_blueprint(wortschatz_bp, url_prefix='/wortschatz')
+
     return app
