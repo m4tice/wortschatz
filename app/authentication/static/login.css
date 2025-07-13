@@ -161,7 +161,7 @@ h2 {
 /* Login button */
 #btn-login {
     /* background: linear-gradient(135deg, var(--main), #c8a882); */
-    background: burlywood;
+    background: var(--main);
     color: #2c2c2c;
     font-weight: 600;
     font-size: 16px;
@@ -211,7 +211,7 @@ h2 {
     top: 15px;
     left: 15px;
     /* background: linear-gradient(135deg, var(--main), #c8a882); */
-    background: burlywood;
+    background: var(--main);
     color: #2c2c2c;
     padding: 8px 16px;
     font-size: 11px;

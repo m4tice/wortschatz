@@ -129,6 +129,39 @@ li {
     -webkit-backdrop-filter: blur(15px);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cont-parent .card-button {
+    margin-top: auto;
+    background: burlywood;
+    color: #2c2c2c;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(210, 180, 140, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.cont-parent .card-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color:#2c2c2c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(210, 180, 140, 0.4);
 }
 
 .cont h2 {
