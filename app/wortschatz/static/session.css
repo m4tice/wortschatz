@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --main: burlywood;
+  --side: #d2b48c;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-apple: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    font-family: var(--font-montserrat) !important;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url('resources/wallpaperflare.com_wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    position: relative;
+    z-index: 1;
+    color: #868686 !important; /* Adjust color as needed */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 2s forwards;
+    font-size: 100px !important;
+    font-weight: 700 !important;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    position: absolute !important;
+    top: 24px !important;
+    right: 80px !important;
+    /* padding: 10px; */
+    padding: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    border-radius: 50px !important;
+}
+
+.nav-link {
+    padding: 0 !important;
+}
+
+li {
+    font-size: 19px !important;
+    display: block !important;
+    padding: 20px 15px 20px 15px !important;
+    position: relative;
+}
+
+#btn-signup {
+    display: flex;
+    align-items: center;
+    font-size: 19px !important;
+    border-radius: 50px !important;
+    margin: 0 0 0 10px;
+    padding: 9px 17px 9px 19px;
+}
+
+/* Git version label */
+.label-gitv {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    /* background: linear-gradient(135deg, var(--main), #c8a882); */
+    background: var(--main);
+    color: #2c2c2c;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 15px;
+    border-radius: 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.3px;
+}
+
+/* Small screen adjustments for better readability */
+@media (max-width: 768px) {
+    .cont-parent {
+        grid-column-gap: clamp(5px, 2vw, 20px);
+        padding: 0 5px;
+    }
+    
+    .cont-parent .card {
+        min-width: 150px;
+        padding: clamp(15px, 3vw, 25px) clamp(10px, 2vw, 20px);
+    }
+    
+    h1 {
+        font-size: clamp(40px, 8vw, 80px) !important;
+    }
+    
+    .navbar {
+        top: 15px !important;
+        right: 15px !important;
+    }
+    
+    li {
+        font-size: clamp(14px, 2.5vw, 17px) !important;
+        padding: clamp(10px, 2vw, 15px) clamp(8px, 1.5vw, 12px) !important;
+    }
+    
+    #btn-logout {
+        font-size: clamp(14px, 2.5vw, 17px) !important;
+        padding: clamp(6px, 1.5vw, 8px) clamp(10px, 2vw, 15px) !important;
+    }
+}
