@@ -10,12 +10,12 @@ from app.util import get_git_branch
 from . import wortschatz_bp
 
 
-@wortschatz_bp.route('/')
+@wortschatz_bp.route('/modes')
 @login_required
-def worschatz():
+def modes():
     """
     Render the wortschatz page template.
     Returns:
         str: The rendered HTML of the home page.
     """
-    return render_template('wortschatz/wortschatz.html', gitv=get_git_branch())
+    return render_template('wortschatz/modes.html', gitv=get_git_branch())
