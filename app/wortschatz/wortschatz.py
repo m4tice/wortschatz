@@ -18,4 +18,4 @@ def worschatz():
     Returns:
         str: The rendered HTML of the home page.
     """
-    return render_template('wortschatz/wortschatz.html', gitv=get_git_branch())
+    return render_template('wortschatz/modes.html', gitv=get_git_branch())
