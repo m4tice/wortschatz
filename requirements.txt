@@ -2,3 +2,4 @@ requests
 flask
 bcrypt
 GitPython
+pytest
