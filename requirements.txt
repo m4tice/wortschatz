@@ -2,3 +2,7 @@ requests
 flask
 bcrypt
 GitPython
+pytest
+pytest-cov
+pytest-mock
+coverage
