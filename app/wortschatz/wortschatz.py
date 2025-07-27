@@ -36,6 +36,7 @@ def session():
     Render the session page template.
     
     Endpoint: wortschatz/session?questions=<questions>&topic=<topic>
+    e.g.    : wortschatz/session?questions=10&topic=car
 
     Args (from query parameters):
         questions (int): The number of questions to retrieve.

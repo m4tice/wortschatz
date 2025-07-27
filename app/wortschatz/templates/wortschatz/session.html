@@ -36,11 +36,14 @@
             <button id="btn-logout" class="btn btn-secondary" type="submit">Log out</button>
         </div>
     </nav>
-    <h1>Welcome to Wortschatz session</h1>
-    <p>{{ words|length }} words found for topic '{{ topic }}'</p>
-    {% for word in words %}
-        <p>{{ word }}</p>
-    {% endfor %}
+    
+    <div class="container">
+        {% for word in words %}
+            <h1>{{ word }}</h1>
+        {% endfor %}
+        <input type="text" id="answer" class="form-control mb-3" placeholder="Type your answer here...">
+        <button id="btn-validate" class="btn btn-primary">Validate</button>
+    </div>
     <script src='static/session.js'></script>
 </body>
 
