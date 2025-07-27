@@ -7,6 +7,7 @@ GIT_BRANCH = True
 
 # Path to the user database
 USER_DB = "app/database/dbs/user.db"
+DEEN_DB = "app/database/dbs/de-en.db"
 
 SECRET_KEY = 'your_secret_key'
 SESSION_COOKIE_HTTPONLY = True

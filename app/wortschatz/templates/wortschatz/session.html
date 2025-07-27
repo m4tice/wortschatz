@@ -37,6 +37,10 @@
         </div>
     </nav>
     <h1>Welcome to Wortschatz session</h1>
+    <p>{{ words|length }} words found for topic '{{ topic }}'</p>
+    {% for word in words %}
+        <p>{{ word }}</p>
+    {% endfor %}
     <script src='static/session.js'></script>
 </body>
 
