@@ -15,35 +15,33 @@
 </head>
 
 <body>
-    {% if gitv %}
-    <div class="label-gitv">-b {{ gitv }}</div>
-    {% endif %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                </ul>
+    <div class="parent">
+        <div class="div-health">
+            <div class="health-bar">
+                <div class="health-fill"></div>
+                <span class="health-text">Health: 100%</span>
             </div>
-            <button id="btn-logout" class="btn btn-secondary" type="submit">Log out</button>
+            <div class="heart-icon">❤️</div>
         </div>
-    </nav>
-    
-    <div class="container">
-        {% for word in words %}
-            <h1>{{ word }}</h1>
-        {% endfor %}
-        <input type="text" id="answer" class="form-control mb-3" placeholder="Type your answer here...">
-        <button id="btn-validate" class="btn btn-primary">Validate</button>
+        <div class="div-notification">Ready</div>
+        <div class="div-question" id="question-container">
+            <p id="question-text">Loading question...</p>
+        </div>
+        <div class="div-answer">
+            <input type="text" placeholder="Type your answer here..." />
+        </div>
+        <div class="div-button">
+            <button id="check-btn" class="check-btn">CHECK</button>
+        </div>
     </div>
+    <script>
+        // Pass questions data from Flask to JavaScript
+        window.sessionData = {
+            questions: {{ questions_data | tojson }},
+            totalQuestions: {{ questions | default(10) }},
+            topic: {{ topic | tojson }}
+        };
+    </script>
     <script src='static/session.js'></script>
 </body>
 

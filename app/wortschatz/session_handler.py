@@ -20,8 +20,15 @@ class SessionHandler:
         self.questions = []
 
     def set_session(self, questions=10, topic=None):
-        data = self.db.get_questions_by_keyword(questions=questions, keyword=topic)
+        if topic == "random" or topic is None:
+            # Use random words when topic is "random" or None
+            data = self.db.get_random_word(questions=questions)
+        else:
+            # Use keyword search for specific topics
+            data = self.db.get_questions_by_keyword(questions=questions, keyword=topic)
         self.questions = self.__transform(data)
+        print(f"[DEBUG] Loaded questions: {list(self.questions.keys())}")
+        print(f"[DEBUG] Question data: {self.questions}")
 
     def __transform(self, data):
         """
